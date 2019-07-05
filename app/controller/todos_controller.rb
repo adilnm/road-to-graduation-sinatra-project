@@ -7,4 +7,8 @@ class TodosController < ApplicationController
       redirect '/login'
     end
   end
+
+  get '/todos/new' do
+    
+  end
 end
