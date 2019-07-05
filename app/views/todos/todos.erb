@@ -1,0 +1,7 @@
+<h1>Todos</h1>
+<ul>
+  <%@todos.each do |todo|%>
+  <a href=#><li><%=todo.name%></li></a>
+  <%end%>
+</ul>
+<a href="/logout">Log out</a>
