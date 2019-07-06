@@ -12,6 +12,14 @@ class TodosController < ApplicationController
     if !Helpers.is_logged_in?(session)
       redirect '/login'
     else
+      @user=Helpers.current_user(session)
       erb :'/todos/new'
+    end
+  end
+
+  post '/todos' do
+    @user=Helpers.current_user(session)
+    @todo=ToDo.find_or_create_by(user_id:@user.id, course_id: params[:courses])
+    @todo.update(params[:todo])
   end
 end

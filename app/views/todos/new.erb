@@ -1,14 +1,21 @@
 <h1>Add a new assignment</h1>
 <form action="/todos" method="post">
 
-  <label for="name_field">Course: </label>
-  <input type="text" name="name" id="name_field"><br>
+  <label for="name_field">Assignment: </label>
+  <input type="text" name="todo[name]" id="name_field"><br>
 
-  <label for="type_field">Professor: </label>
-  <input type="text" name="professor" id="type_field"><br>
+  <label for="category_field">Category: </label>
+  <input type="text" name="todo[category]" id="category_field"><br>
 
-  <label for="deadline_field">Professor: </label>
-  <input type="text" name="deadline" id="deadline_field"><br>
+  <label for="deadline_field">Deadline_field: </label>
+  <input type="text" name="todo[deadline]" id="deadline_field"><br>
+
+  <select name="courses">
+    <%@user.courses.each do |course|%>
+    <option value="<%=course.id%>"> <%=course.name%></option>
+    <% end %>
+  </select><br>
+
 
   <input type="submit" value="Add assignment">
 </form>
