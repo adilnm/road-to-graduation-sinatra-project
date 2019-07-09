@@ -2,19 +2,46 @@
   <%= flash[:message] %>
 <% end %>
 
-<h1>Sign up below</h1>
-<form action="/signup" method="post">
-  <label for="username_field">Username: </label>
-  <input type="text" name="username" id="username_field"><br>
+<div class="main">
+    <h1>Sign up</h1>
+      <div class="container">
+        <div class="sign-up-content">
+          <form action="/signup" method="post">
+            <h2 class="form-title">STUDENT REGISTRATION FORM</h2>
+            <div class="form-textbox">
+              <label for="username_field">Username: </label>
+              <input type="text" name="username" id="username_field"><br>
+            </div>
 
-  <label for="name_field">Name: </label>
-  <input type="text" name="name" id="name_field"><br>
+            <div class="form-textbox">
+              <label for="name_field">Name: </label>
+              <input type="text" name="name" id="name_field"><br>
+            </div>
 
-  <label for="email_field">Email: </label>
-  <input type="text" name="email" id="email_field"><br>
 
-  <label for="password_field">Password: </label>
-  <input type="text" name="password" id="password_field"><br>
+            <div class="form-textbox">
+              <label for="email_field">Email: </label>
+              <input type="text" name="email" id="email_field"><br>
+            </div>
 
-  <input type="submit" value="Signup">
-</form>
+
+            <div class="form-textbox">
+              <label for="password_field">Password: </label>
+              <input type="text" name="password" id="password_field"><br>
+
+            </div>
+
+
+            <div class="form-textbox">
+              <input class="submit" type="submit" value="Signup">
+            </div>
+          </form>
+
+          <p class="loginhere">
+                    Already have an account ?<a href="/login" class="loginhere-link"> Log in</a>
+          </p>
+        </div>
+
+        </div>
+      </div>
+  </div>
