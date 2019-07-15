@@ -312,7 +312,9 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 body {
-  background: url("/images/graduation.jpg");
+  background: url("/images/grad.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .fh5co-cover {
@@ -1065,7 +1067,7 @@ body {
   border-radius: 5px;
   margin-bottom: 40px;
   position: relative;
-  opacity:0.8;
+  opacity:0.6;
 }
 .price-box.popular .btn-select-plan {
   background: #EA9215;
@@ -1431,6 +1433,7 @@ body {
 .btn:hover, .btn:active, .btn:focus {
   box-shadow: none !important;
   outline: none !important;
+  background-color: #1da0f2;
 }
 
 .btn-primary {

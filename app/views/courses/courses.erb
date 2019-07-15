@@ -11,8 +11,10 @@
 						<ul>
 							<li><a href="/">Home</a></li>
 							<li class="active"><a href="/courses">Courses</a></li>
+              <li class="btn-cta"><a href="/courses/new"><span>Add a new course</span></a></li>
+              <li class="btn-cta"><a href="/todos/new"><span>Add new assignment</span></a></li>
 							<li class="btn-cta"><a href="/login"><span><%=@user.name%></span></a></li>
-							<li class="btn-cta"><a href="/signout"><span>Sign out</span></a></li>
+							<li class="btn-cta"><a href="/logout"><span>Sign out</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -28,14 +30,7 @@
                     <h3><b>Course: </b><%=course.name%></h3>
                     <h3><b>Professor: </b><%=course.professor%></h3>
                     <h3><b>Final Grade: </b><%=course.final_grade%></h3>
-                    <div class="gr-line"></div>
-                    <div>50 GB DISK SPACE</div>
-                    <div class="gr-line"></div>
-                    <div>100 GB BANDWIDTH</div>
-                    <div class="gr-line"></div>
-                    <div>FREE DOMAIN REGISTRATION</div>
-                    <br>
-                    <button class="btn btn-banner"><a href="/courses/<%=course.id%>">ASSIGNMENTS</a></button>
+                              <button class="btn btn-banner"><a href="/courses/<%=course.id%>">ASSIGNMENTS</a></button>
                 </div>
             </div>
               <%end%>
