@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-nav {
-  position: absolute;
+  position: relative;
   top: 0;
   margin: 0;
   padding: 0;
@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-nav a {
   padding: 5px 10px;
-  color: #fff;
+  color: #1da0f2;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav .menu-1 {
@@ -218,14 +218,14 @@ h1, h2, h3, h4, h5, h6, figure {
   letter-spacing: 0;
 }
 .fh5co-nav ul li.has-dropdown .dropdown li a:hover {
-  color: #fff;
+  color: #1da0f2;
 }
 .fh5co-nav ul li.has-dropdown:hover a, .fh5co-nav ul li.has-dropdown:focus a {
-  color: #fff;
+  color: #1da0f2;
 }
 .fh5co-nav ul li.btn-cta a {
   padding: 30px 0px !important;
-  color: #fff;
+  color: #1da0f2;
 }
 .fh5co-nav ul li.btn-cta a span {
   background: rgba(255, 255, 255, 0.2);
@@ -248,7 +248,7 @@ h1, h2, h3, h4, h5, h6, figure {
   box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
 }
 .fh5co-nav ul li.active > a {
-  color: #fff !important;
+  color: #1da0f2 !important;
 }
 
 #fh5co-header,
@@ -302,20 +302,7 @@ h1, h2, h3, h4, h5, h6, figure {
   vertical-align: middle;
   font-size: 40px;
 }
-.fh5co-video .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-.fh5co-video:hover .overlay {
-  background: rgba(0, 0, 0, 0.7);
-}
+
 .fh5co-video:hover a {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -337,15 +324,7 @@ body {
   float: left;
   width: 100%;
 }
-.fh5co-cover .overlay {
-  z-index: 0;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
+
 .fh5co-cover > .fh5co-container {
   position: relative;
   z-index: 10;
@@ -961,17 +940,10 @@ body {
   float: left;
   width: 100%;
 }
-#fh5co-started .overlay {
-  z-index: 0;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-}
+
+
 #fh5co-started .fh5co-heading h2 {
-  color: #fff;
+  color: #1da0f2;
   margin-bottom: 20px !important;
 }
 #fh5co-started .fh5co-heading p {
@@ -980,7 +952,7 @@ body {
 #fh5co-started .form-control {
   background: rgba(255, 255, 255, 0.2);
   border: none !important;
-  color: #fff;
+  color: #1da0f2;
   font-size: 16px !important;
   width: 100%;
   -webkit-transition: 0.5s;
@@ -988,18 +960,18 @@ body {
   transition: 0.5s;
 }
 #fh5co-started .form-control::-webkit-input-placeholder {
-  color: #fff;
+  color: #1da0f2;
 }
 #fh5co-started .form-control:-moz-placeholder {
   /* Firefox 18- */
-  color: #fff;
+  color: #1da0f2;
 }
 #fh5co-started .form-control::-moz-placeholder {
   /* Firefox 19+ */
-  color: #fff;
+  color: #1da0f2;
 }
 #fh5co-started .form-control:-ms-input-placeholder {
-  color: #fff;
+  color: #1da0f2;
 }
 #fh5co-started .form-control:focus {
   background: rgba(255, 255, 255, 0.3);
@@ -1008,7 +980,7 @@ body {
   height: 54px;
   border: none !important;
   background: #EA9215;
-  color: #fff;
+  color: #1da0f2;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 400;
@@ -1044,7 +1016,7 @@ body {
 .fh5co-blog .blog-text {
   margin-bottom: 30px;
   position: relative;
-  background: #fff;
+  background: #1da0f2;
   width: 100%;
   padding: 30px;
   float: left;
@@ -1083,7 +1055,7 @@ body {
 }
 
 .price-box {
-  width: 100%;
+  width: 90%;
   text-align: center;
   padding: 30px;
   background: rgba(0, 0, 0, 0.05);
@@ -1093,6 +1065,7 @@ body {
   border-radius: 5px;
   margin-bottom: 40px;
   position: relative;
+  opacity:0.8;
 }
 .price-box.popular .btn-select-plan {
   background: #EA9215;
