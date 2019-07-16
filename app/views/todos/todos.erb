@@ -23,14 +23,6 @@
   </div>
 </nav>
 <h1 class="log">Todos</h1>
-<ul>
-  <%@todos.each do |todo|%>
-    <%if todo.name%>
-    <li><%=todo.name%></li>
-    <%end%>
-  <%end%>
-</ul>
-<a href="/logout">Log out</a>
 
 <div class="row">
   <%@todos.each do |todo|%>
@@ -44,6 +36,6 @@
                 </div>
             </div>
       <%end%>
-              <%end%>
+  <%end%>
 
         </div>

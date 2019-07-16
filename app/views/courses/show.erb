@@ -1,2 +1,9 @@
 <h1>Class name: <%=@course.name%></h1>
 <h1>Class professor: <%=@course.professor%></h1>
+
+
+<ul>
+  <%@course.to_dos.each do |todo|%>
+    <li><%=todo.name%></li>
+    <%end%>
+</ul>

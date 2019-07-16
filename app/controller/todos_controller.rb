@@ -23,4 +23,10 @@ class TodosController < ApplicationController
     @todo=ToDo.find_or_create_by(user_id:@user.id, course_id: params[:courses])
     @todo.update(params[:todo])
   end
+
+  get '/todos/:id' do
+    @todo=ToDo.find(params[:id])
+
+    erb :'/todos/show'
+  end
 end
