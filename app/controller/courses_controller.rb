@@ -11,9 +11,12 @@ class CoursesController < ApplicationController
 
   get '/courses/new' do
     if !Helpers.is_logged_in?(session)
+
       redirect '/login'
 
     else
+      @user=Helpers.current_user(session)
+      @courses=Helpers.current_user(session).courses
       erb :'/courses/new'
 
     end

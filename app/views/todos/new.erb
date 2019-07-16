@@ -1,21 +1,59 @@
-<h1>Add a new assignment</h1>
+<nav class="fh5co-nav" role="navigation">
+
+  <div class="top-menu">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-1">
+          <div id="fh5co-logo"><a href="/">Learn<span>.</span></a></div>
+        </div>
+        <div class="col-xs-11 text-right menu-1">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/courses">Courses</a></li>
+            <li class="btn-cta"><a href="/courses/new"><span>Add a new course</span></a></li>
+            <li class="btn-cta"><a href="/todos/new"><span>Add new assignment</span></a></li>
+            <li class="btn-cta"><a href="/login"><span><%=@user.name%></span></a></li>
+            <li class="btn-cta"><a href="/logout"><span>Sign out</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+<div class="main">
+<div class="contain">
+<div class="sign-up-content">
 <form action="/todos" method="post">
+  <h2 class="form-title">ADD A NEW ASSIGNMENT</h2>
 
-  <label for="name_field">Assignment: </label>
-  <input type="text" name="todo[name]" id="name_field"><br>
+  <div class="form-textbox">
+    <label for="assignment_field">Assignment: </label>
+    <input type="text" name="todo[name]" id="assignment_field"><br>
+  </div>
 
-  <label for="category_field">Category: </label>
-  <input type="text" name="todo[category]" id="category_field"><br>
+  <div class="form-textbox">
+    <label for="category_field">Category: </label>
+    <input type="text" name="todo[category]" id="category_field"><br>
+  </div>
 
-  <label for="deadline_field">Deadline_field: </label>
-  <input type="text" name="todo[deadline]" id="deadline_field"><br>
+  <div class="form-textbox">
+    <label for="deadline_field">Deadline_field: </label>
+    <input type="text" name="todo[deadline]" id="deadline_field"><br>
+  </div>
 
+  <div class="form-textbox">
   <select name="courses">
     <%@user.courses.each do |course|%>
     <option value="<%=course.id%>"> <%=course.name%></option>
     <% end %>
   </select><br>
+  </div>
 
-
-  <input type="submit" value="Add assignment">
+  <div class="form-textbox">
+  <input type="submit" value="Add assignment" class="submit">
+  </div>
 </form>
+</div>
+</div>
+</div>

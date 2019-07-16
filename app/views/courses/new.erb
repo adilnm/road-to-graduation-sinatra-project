@@ -1,11 +1,44 @@
-<h1>Add a new course</h1>
-<form action="/courses" method="post">
+	<nav class="fh5co-nav" role="navigation">
 
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-1">
+						<div id="fh5co-logo"><a href="/">Learn<span>.</span></a></div>
+					</div>
+					<div class="col-xs-11 text-right menu-1">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li class="active"><a href="/courses">Courses</a></li>
+              <li class="btn-cta"><a href="/courses/new"><span>Add a new course</span></a></li>
+              <li class="btn-cta"><a href="/todos/new"><span>Add new assignment</span></a></li>
+							<li class="btn-cta"><a href="/login"><span><%=@user.name%></span></a></li>
+							<li class="btn-cta"><a href="/logout"><span>Sign out</span></a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</nav>
+<div class="main">
+<h1 class="add-course">New course</h1>
+<div class="contain">
+  <div class="sign-up-content">
+<form action="/courses" method="post">
+<h2 class="form-title">ADD A NEW COURSE</h2>
+<div class="form-textbox">
   <label for="course_field">Course: </label>
   <input type="text" name="name" id="course_field"><br>
-
+</div>
+<div class="form-textbox">
   <label for="professor_field">Professor: </label>
   <input type="text" name="professor" id="professor_field"><br>
-
-  <input type="submit" value="Add course">
+</div>
+<div class="form-textbox">
+  <input type="submit" value="Add course" class="submit">
+</div>
 </form>
+</div>
+</div>
+</div>
