@@ -1651,6 +1651,7 @@ list-type-ulli {
 
 .log, .add-course{
   position: absolute;
+  font-weight: 700;
   font-size: 174px;
   color: #fff;
   opacity: 0.5;
