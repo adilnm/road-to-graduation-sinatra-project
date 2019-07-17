@@ -1657,7 +1657,7 @@ list-type-ulli {
   opacity: 0.5;
   right: 0px;
   top: 100px;
-  z-index: 9; }
+  z-index: -9; }
 
 .contain {
   width: 520px;
