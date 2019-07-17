@@ -29,6 +29,7 @@ class CoursesController < ApplicationController
   end
 
   get '/courses/:id' do
+    @user=User.find(session[:user_id])
     @course=Course.find(params[:id])
 
     erb :'/courses/show'

@@ -1,9 +1,39 @@
-<h1>Class name: <%=@course.name%></h1>
-<h1>Class professor: <%=@course.professor%></h1>
+<nav class="fh5co-nav" role="navigation">
 
+  <div class="top-menu">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-1">
+          <div id="fh5co-logo"><a href="/">Learn<span>.</span></a></div>
+        </div>
+        <div class="col-xs-11 text-right menu-1">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/courses">Courses</a></li>
+            <li class="active"><a href="/todos">Assignments</a></li>
+            <li class="btn-cta"><a href="/courses/new"><span>Add a new course</span></a></li>
+            <li class="btn-cta"><a href="/todos/new"><span>Add new assignment</span></a></li>
+            <li class="btn-cta"><a href="/login"><span><%=@user.name%></span></a></li>
+            <li class="btn-cta"><a href="/logout"><span>Sign out</span></a></li>
+          </ul>
+        </div>
+      </div>
 
-<ul>
+    </div>
+  </div>
+</nav>
+<h1 class="log"><%=@course.name%></h1>
+
+<div class="row">
   <%@course.to_dos.each do |todo|%>
-    <li><%=todo.name%></li>
-    <%end%>
-</ul>
+            <div class="col-sm-4 " >
+                <div class="price-box">
+                    <h1><b><%=@course.name%></b></h1>
+                    <h3><b>Assignment: </b><%=todo.name%></h3>
+                    <h3><b>Deadline: </b><%=todo.deadline%></h3>
+
+                </div>
+            </div>
+              <%end%>
+
+</div>
