@@ -31,7 +31,11 @@
                     <h1><b><%=@course.name%></b></h1>
                     <h3><b>Assignment: </b><%=todo.name%></h3>
                     <h3><b>Deadline: </b><%=todo.deadline%></h3>
-
+                    <button class="btn btn-banner"><a href="/todos/<%=todo.id%>/edit">EDIT</a></button>
+                    <form action="/todos/<%=todo.id%>/delete" method="post">
+										  <input id="hidden" type="hidden" name="_method" value="delete">
+										  <input class="btn btn-banner" type="submit" value="DELETE ASSIGNMENT">
+										</form>
                 </div>
             </div>
   <%end%>

@@ -1,0 +1,26 @@
+<div class="main">
+<h1 class="add-course">Edit Assignment</h1>
+<div class="contain">
+  <div class="sign-up-content">
+<form action="/todos/<%= @todo.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <h2 class="form-title">Edit <%=@todo.name%> Assignment</h2>
+  <div class="form-textbox">
+    <label for="name_field">Assignment: </label>
+    <input type="text" name="name" value="<%=@todo.name%>" id="name_field"><br>
+  </div>
+  <div class="form-textbox">
+    <label for="category_field">Category: </label>
+    <input type="text" name="category" value="<%=@todo.category%>" id="category_field"><br>
+  </div>
+  <div class="form-textbox">
+    <label for="deadline_field">Deadline: </label>
+    <input type="text" name="deadline" value="<%=@todo.deadline%>" id="deadline_field"><br>
+  </div>
+  <div class="form-textbox">
+    <input type="submit" value="Edit Assignment" class="submit">
+  </div>
+</form>
+</div>
+</div>
+</div>

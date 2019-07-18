@@ -26,7 +26,32 @@ class TodosController < ApplicationController
 
   get '/todos/:id' do
     @todo=ToDo.find(params[:id])
-
     erb :'/todos/show'
   end
+
+  get '/todos/:id/edit' do
+    @todo = ToDo.find_by_id(params[:id])
+    erb :'/todos/edit'
+  end
+
+  patch '/todos/:id' do
+     @todos = ToDo.find_by_id(params[:id])
+     @todos.name = params[:name]
+     @todos.category = params[:category]
+     @todos.deadline = params[:deadline]
+     @todos.save
+     redirect to "/todos"
+  end
+
+  delete '/todos/:id/delete' do
+    if !Helpers.is_logged_in?(session)
+      redirect '/login'
+    end
+
+    @todo = ToDo.find_by_id(params[:id])
+    @todo.delete
+    redirect to '/courses'
+  end
+
+
 end
