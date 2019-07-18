@@ -31,7 +31,12 @@
                     <h3><b>Course: </b><%=course.name%></h3>
                     <h3><b>Professor: </b><%=course.professor%></h3>
                     <h3><b>Final Grade: </b><%=course.final_grade%></h3>
-                              <button class="btn btn-banner"><a href="/courses/<%=course.id%>">ASSIGNMENTS</a></button>
+										<button class="btn btn-banner"><a href="/courses/<%=course.id%>/edit">EDIT</a></button>
+                    <button class="btn btn-banner"><a href="/courses/<%=course.id%>">ASSIGNMENTS</a></button>
+										<form action="/courses/<%= course.id %>/delete" method="post">
+										  <input id="hidden" type="hidden" name="_method" value="delete">
+										  <input class="btn btn-banner" type="submit" value="DELETE COURSE">
+										</form>
                 </div>
             </div>
               <%end%>

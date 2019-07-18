@@ -1,0 +1,26 @@
+<div class="main">
+<h1 class="add-course">Edit Course</h1>
+<div class="contain">
+  <div class="sign-up-content">
+<form action="/courses/<%= @course.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <h2 class="form-title">Edit <%=@course.name%> Class</h2>
+  <div class="form-textbox">
+    <label for="course_field">Course: </label>
+    <input type="text" name="name" value="<%=@course.name%>" id="course_field"><br>
+  </div>
+  <div class="form-textbox">
+    <label for="professor_field">Professor: </label>
+    <input type="text" name="professor" value="<%=@course.professor%>" id="professor_field"><br>
+  </div>
+  <div class="form-textbox">
+    <label for="grade_field">Grade: </label>
+    <input type="text" name="grade" value="<%=@course.final_grade%>" id="grade_field"><br>
+  </div>
+  <div class="form-textbox">
+    <input type="submit" value="Edit Course" class="submit">
+  </div>
+</form>
+</div>
+</div>
+</div>
