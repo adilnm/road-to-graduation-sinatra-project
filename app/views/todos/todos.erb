@@ -8,13 +8,13 @@
         </div>
         <div class="col-xs-11 text-right menu-1">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li class="active"><a href="/courses">Courses</a></li>
-            <li class="active"><a href="/todos">Assignments</a></li>
-            <li class="btn-cta"><a href="/courses/new"><span>Add a new course</span></a></li>
-            <li class="btn-cta"><a href="/todos/new"><span>Add new assignment</span></a></li>
-            <li class="btn-cta"><a href="/login"><span><%=@user.name%></span></a></li>
-            <li class="btn-cta"><a href="/logout"><span>Sign out</span></a></li>
+            <li class="btn-cta"><a href="/"><span><b>Home</b></span></a></li>
+            <li class="btn-cta"><a href="/courses"><span><b>Courses</b></span></a></li>
+            <li class="btn-cta"><a href="/todos"><span><b>Assignments</b></span></a></li>
+            <li class="btn-cta"><a href="/courses/new"><span><b>Add a new course</b></span></a></li>
+            <li class="btn-cta"><a href="/todos/new"><span><b>Add new assignment</b></span></a></li>
+            <li class="btn-cta"><a href="/login"><span><b><%=@user.name%></b></span></a></li>
+            <li class="btn-cta"><a href="/logout"><span><b>Sign out</b></span></a></li>
           </ul>
         </div>
       </div>
@@ -22,7 +22,7 @@
     </div>
   </div>
 </nav>
-<h1 class="log">Todos</h1>
+<h1 class="log">TODOS</h1>
 
 <div class="row">
   <%@todos.each do |todo|%>
@@ -33,6 +33,11 @@
                     <h3><b>Assignment: </b><%=todo.name%></h3>
                     <h3><b>Category: </b><%=todo.category%></h3>
                     <h3><b>Deadline: </b><%=todo.deadline%></h3>
+                    <button class="btn btn-banner"><a href="/todos/<%=todo.id%>/edit">EDIT</a></button>
+                    <form action="/todos/<%=todo.id%>/delete" method="post">
+										  <input id="hidden" type="hidden" name="_method" value="delete">
+										  <input class="btn btn-banner" type="submit" value="DELETE ASSIGNMENT">
+										</form>
 
                 </div>
             </div>

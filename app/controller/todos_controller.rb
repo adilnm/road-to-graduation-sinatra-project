@@ -30,6 +30,7 @@ class TodosController < ApplicationController
   end
 
   get '/todos/:id/edit' do
+    @user=User.find(session[:user_id])
     @todo = ToDo.find_by_id(params[:id])
     erb :'/todos/edit'
   end

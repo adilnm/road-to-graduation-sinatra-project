@@ -36,6 +36,7 @@ class CoursesController < ApplicationController
       end
 
       get '/courses/:id/edit' do
+        @user=User.find(session[:user_id])
         @course = Course.find_by_id(params[:id])
         erb :'/courses/edit'
       end
