@@ -23,14 +23,15 @@
   </div>
 </nav>
 <h1 class="log"><%=@course.name%></h1>
-
 <div class="row">
-  <%@course.to_dos.each do |todo|%>
+  <%@course.to_dos[1..-1].each do |todo|%>
+
             <div class="col-sm-4 " >
                 <div class="price-box">
                     <h1><b><%=@course.name%></b></h1>
                     <h3><b>Assignment: </b><%=todo.name%></h3>
                     <h3><b>Deadline: </b><%=todo.deadline%></h3>
+                    <h3><b>Description: </b><%=todo.description%></h3>
                     <button class="btn btn-banner"><a href="/todos/<%=todo.id%>/edit">EDIT</a></button>
                     <form action="/todos/<%=todo.id%>/delete" method="post">
 										  <input id="hidden" type="hidden" name="_method" value="delete">

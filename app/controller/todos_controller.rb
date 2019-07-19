@@ -20,7 +20,7 @@ class TodosController < ApplicationController
 
   post '/todos' do
     @user=Helpers.current_user(session)
-    @todo=ToDo.find_or_create_by(user_id:@user.id, course_id: params[:courses])
+    @todo=ToDo.create(user_id:@user.id, course_id: params[:courses])
     @todo.update(params[:todo])
   end
 
@@ -39,8 +39,9 @@ class TodosController < ApplicationController
      @todos.name = params[:name]
      @todos.category = params[:category]
      @todos.deadline = params[:deadline]
+     @todos.description = params[:description]
      @todos.save
-     redirect to "/todos"
+     redirect to "/courses"
   end
 
   delete '/todos/:id/delete' do

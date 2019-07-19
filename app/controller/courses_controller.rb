@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
       get '/courses' do
         if Helpers.is_logged_in?(session)
           @user=Helpers.current_user(session)
-          @courses=Helpers.current_user(session).courses
+          @courses=Helpers.current_user(session).courses.uniq
           erb :'/courses/courses'
         else
           redirect '/login'

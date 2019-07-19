@@ -1,5 +1,5 @@
 <div class="main">
-<h1 class="add-course">Edit Assignment</h1>
+<h1 class="add-course">EDIT</h1>
 <div class="contain">
   <div class="sign-up-content">
 <form action="/todos/<%= @todo.id %>" method="post">
@@ -17,6 +17,7 @@
     <label for="deadline_field">Deadline: </label>
     <input type="text" name="deadline" value="<%=@todo.deadline%>" id="deadline_field"><br>
   </div>
+  <textarea placeholder="Description:" name="description" rows="5" cols="40"></textarea>
   <div class="form-textbox">
     <input type="submit" value="Edit Assignment" class="submit">
   </div>
