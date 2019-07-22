@@ -1,12 +1,19 @@
-<% if flash.has?(:message) %>
-  <%= flash[:message] %>
-<% end %>
 
 <div class="main">
     <h1 class="log">Sign up</h1>
       <div class="contain">
         <div class="sign-up-content">
           <form action="/signup" method="post">
+            <% if @errors.any? %>
+              <div class="alert alert-danger">
+                  <ul>
+                    <%@errors.each do |error|%>
+                    <li><%=error%></li>
+                    <%end%>
+                  </ul>
+                  <%@errors.clear%>
+              </div>
+            <% end %>
             <h2 class="form-title">STUDENT REGISTRATION FORM</h2>
             <div class="form-textbox">
               <label for="username_field">Username: </label>
@@ -27,7 +34,7 @@
 
             <div class="form-textbox">
               <label for="password_field">Password: </label>
-              <input type="text" name="password" id="password_field"><br>
+              <input type="password" name="password" id="password_field"><br>
 
             </div>
 

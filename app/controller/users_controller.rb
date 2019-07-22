@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   get '/signup' do
     if !Helpers.is_logged_in?(session)
+
+      @errors=session[:errors]
       erb :'/users/signup'
     else
       redirect '/courses'
@@ -8,10 +10,15 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    if params[:username]=="" || params[:email]=="" || params[:password]=="" || params[:name]==""
+    @user=User.new(params)
+    @user.valid?
+
+    if @user.errors.any?
+      session[:errors] = @user.errors.messages.map {|k,v| "#{k} #{v.first}"}
+      # flash[:message] = @user.errors.messages[:name]
       redirect '/signup'
     else
-      @user=User.create(username: params[:username], name: params[:name], email: params[:email], password: params[:password])
+      @user.save
       session[:user_id]=@user.id
       redirect '/courses'
     end
