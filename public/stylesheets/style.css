@@ -1,67 +1,7 @@
-/* @font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-} */
-/* =======================================================
-*
-* 	Template Style
-*
-* ======================================================= */
-/* body {
-  font-family: "Work Sans", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #828282;
-  background: #fff;
-} */
-
-/* #page {
-  position: relative;
-  overflow-x: hidden;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-} */
-/* .offcanvas #page {
-  overflow: hidden;
-  position: absolute;
-}
-.offcanvas #page:after {
-  -webkit-transition: 2s;
-  -o-transition: 2s;
-  transition: 2s;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 101;
-  background: rgba(0, 0, 0, 0.7);
-  content: "";
-} */
 
 a {
   color: #EA9215;
 }
-
-
-/* p {
-  margin-bottom: 20px;
-} */
-
-/* h1, h2, h3, h4, h5, h6, figure {
-  color: #000;
-  font-family: "Work Sans", Arial, sans-serif;
-  font-weight: 400;
-  margin: 0 0 20px 0;
-} */
-
 
 .fh5co-nav {
   position: sticky;
@@ -75,31 +15,7 @@ a {
 .fh5co-nav .top-menu {
   padding: 28px 0;
 }
-/* .fh5co-nav .top {
-  padding: 7px 0;
-  margin-bottom: 0;
-}
-.fh5co-nav .top .num, .fh5co-nav .top .fh5co-social {
-  display: inline-block;
-  margin: 0;
-}
-.fh5co-nav .top .num {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 13px;
-  padding-right: 10px;
-  margin-right: 5px;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  letter-spacing: 0px;
-}
-.fh5co-nav .top .fh5co-social li {
-  font-size: 14px;
-}
-.fh5co-nav .top .fh5co-social li a {
-  padding: 0 7px;
-}
-.fh5co-nav .top .fh5co-social li a i {
-  font-size: 14px;
-} */
+
 .fh5co-nav #fh5co-logo {
   font-size: 24px;
   margin-top: 0;
@@ -119,15 +35,7 @@ a {
 .fh5co-nav #fh5co-logo a span {
   color: #EA9215;
 }
-/* .fh5co-nav a {
-  padding: 5px 10px;
-  color: #1da0f2;
-} */
-/* @media screen and (max-width: 768px) {
-  .fh5co-nav .menu-1 {
-    display: none;
-  }
-} */
+
 .fh5co-nav ul {
   padding: 0;
   margin-right: 0;
@@ -174,13 +82,7 @@ body {
   background-repeat: no-repeat;
 }
 
-
-
-
-.price-box {
-  /* -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px; */
+.course-box {
   border-radius: 5px;
   margin: 20px;
   position: relative;
@@ -192,52 +94,6 @@ body {
   padding: 25px 15px;
   margin-bottom: 45px;
 }
-/* .price-box.popular .btn-select-plan {
-  background: #EA9215;
-} */
-/* .price-box.popular .price {
-  color: #EA9215;
-}
-.price-box .btn-select-plan {
-  padding: 10px 20px;
-  background: #09C6AB;
-  color: #fff;
-}
-.price-box .classes {
-  padding: 0;
-}
-.price-box .classes li {
-  display: block;
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  font-size: 16px;
-  padding: 8px 10px;
-}
-.price-box .classes li.color {
-  background: rgba(0, 0, 0, 0.04);
-} */
-
-/* .pricing-plan {
-  margin: 0 0 50px 0;
-  padding: 0;
-  font-size: 13px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #888f94;
-}
-.pricing-plan.pricing-plan-offer {
-  margin-bottom: 24px;
-}
-.pricing-plan span {
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 0;
-  color: #d5d8db;
-} */
-
-
 
 .btn {
   margin-right: 4px;
@@ -259,19 +115,7 @@ body {
 /
 display-flex {
   display: flex;
-  /* display: -webkit-flex;  */
 }
-
-/* @extend list-type-ulli; */
-/* list-type-ulli {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; } */
-
-/* poppins-300 - latin */
-
-
-
 
 .form-title {
   line-height: 2.5;
@@ -285,7 +129,6 @@ display-flex {
   margin-bottom: 40px; }
 
 .main {
-  /* background: #e7f0fd; */
   padding: 150px 0;
   position: relative; }
 
@@ -395,21 +238,3 @@ input {
   text-decoration: none; }
   .loginhere-link:hover {
     text-decoration: underline; }
-
-    /* .price-box {
-            background: #fbfbfb;
-            text-align: center;
-            border: 1px solid silver;
-            padding: 25px 15px;
-            margin-bottom: 45px;
-        }
-
-        .price-box-dark {
-            background: #1f2533;
-            text-align: center;
-            color: white;
-            border: 1px solid silver;
-            padding: 50px 15px;
-            margin-top: -25px;
-            margin-bottom: 25px;
-        } */

@@ -28,7 +28,7 @@
   <%@todos.each do |todo|%>
       <%if todo.name%>
             <div class="col-sm-4 " >
-                <div class="price-box">
+                <div class="course-box">
                     <h1><b><%=Course.find(todo.course_id).name%></b></h1>
                     <h3><b>Assignment: </b><%=todo.name%></h3>
                     <h3><b>Category: </b><%=todo.category%></h3>

@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   get '/signup' do
     if !Helpers.is_logged_in?(session)
-
       @errors=session[:errors]
+      @errors ||=[]
       erb :'/users/signup'
     else
       redirect '/courses'
@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
+
     @user=User.new(params)
     @user.valid?
 
