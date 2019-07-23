@@ -39,6 +39,7 @@ class UsersController < ApplicationController
       session[:user_id]=@user.id
       redirect '/courses'
     else
+      flash[:errors] = "You have entered an invalid username and/or password"
       redirect '/login'
     end
   end

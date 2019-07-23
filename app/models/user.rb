@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   validates :name, :username, :email, :password, presence: true
   validates :email, uniqueness: true
   validates :username, uniqueness: true
+  validates :email, format: { with: /.*@.*/}
   has_secure_password
   has_many :to_dos
   has_many :courses, through: :to_dos

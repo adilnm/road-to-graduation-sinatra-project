@@ -3,6 +3,9 @@
     <div class="contain">
       <div class="sign-up-content">
         <form  action="/login" method="post">
+          <% if flash.has?(:errors) %>
+            <div class="alert alert-danger"><%= flash[:errors] %></div>
+          <% end %>
           <h2 class="form-title">STUDENT LOGIN FORM</h2>
           <div class="form-textbox">
               <label for="username_field">Username: </label>
