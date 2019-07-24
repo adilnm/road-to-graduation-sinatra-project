@@ -49,7 +49,7 @@
 
   <div class="form-textbox">
   <select name="courses">
-    <%@user.courses.each do |course|%>
+    <%@user.courses.uniq.each do |course|%>
     <option value="<%=course.id%>"> <%=course.name%></option>
     <% end %>
   </select><br>

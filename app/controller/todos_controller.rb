@@ -22,6 +22,7 @@ class TodosController < ApplicationController
     @user=Helpers.current_user(session)
     @todo=ToDo.create(user_id:@user.id, course_id: params[:courses])
     @todo.update(params[:todo])
+    redirect '/courses'
   end
 
   get '/todos/:id' do
