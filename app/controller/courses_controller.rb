@@ -30,14 +30,14 @@ class CoursesController < ApplicationController
 
       get '/courses/:id' do
         @user=User.find(session[:user_id])
-        @course=Course.find(params[:id])
+        @course = @user.courses.find_by_id(params[:id])
 
         erb :'/courses/show'
       end
 
       get '/courses/:id/edit' do
         @user=User.find(session[:user_id])
-        @course = Course.find_by_id(params[:id])
+        @course = @user.courses.find_by_id(params[:id])
         erb :'/courses/edit'
       end
 
