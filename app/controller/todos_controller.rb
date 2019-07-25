@@ -18,7 +18,7 @@ class TodosController < ApplicationController
 
   get '/todos/:id/edit' do
     @user=User.find(session[:user_id])
-    @todo = ToDo.find_by_id(params[:id])
+    @todo = @user.to_dos.find_by_id(params[:id])
     erb :'/todos/edit'
   end
 
