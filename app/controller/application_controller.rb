@@ -15,4 +15,13 @@ class ApplicationController < Sinatra::Base
       erb :index
   end
 
+  helpers do
+    def redirect_if_not_loged_in
+      if !Helpers.is_logged_in?(session)
+        redirect to '/login'
+      end
+    end
+
+  end
+
 end

@@ -54,7 +54,6 @@ class CoursesController < ApplicationController
       if !Helpers.is_logged_in?(session)
         redirect '/login'
       end
-
       @course = Course.find_by_id(params[:id])
       @course.delete
       redirect to '/courses'
